@@ -1,6 +1,5 @@
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import Home from "@/app/page";
 
 describe("Home Page", () => {
@@ -56,15 +55,10 @@ describe("Home Page", () => {
   });
 
   it("diagnosis button should navigate to /diagnosis when clicked", async () => {
-    const user = userEvent.setup();
     render(<Home />);
     const diagnosisLink = screen.getByRole("link", {
       name: /診断スタート/i,
     });
-    
-    // #region agent log
-    fetch('http://127.0.0.1:7250/ingest/aa789ab6-4244-4171-a496-8d18f7c8753f',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'page.test.tsx:60',message:'Diagnosis link found, checking href',data:{href:diagnosisLink.getAttribute('href')},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'A'})}).catch(()=>{});
-    // #endregion
     
     // ボタンがナビゲートページへのリンクを含むか確認
     expect(diagnosisLink).toHaveAttribute("href", "/diagnosis");
