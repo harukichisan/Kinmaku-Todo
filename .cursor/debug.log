@@ -1,0 +1,5 @@
+{"location":"page.test.tsx:60","message":"Before clicking diagnosis button","data":{"buttonText":"診断スタート"},"timestamp":1767952992909,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.test.tsx:67","message":"After clicking diagnosis button, checking navigation","data":{"href":"http://localhost:3000/"},"timestamp":1767952992929,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.test.tsx:60","message":"Diagnosis link found, checking href","data":{"href":"/diagnosis"},"timestamp":1767953036331,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.test.tsx:60","message":"Diagnosis link found, checking href","data":{"href":"/diagnosis"},"timestamp":1767953042399,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.test.tsx:60","message":"Diagnosis link found, checking href","data":{"href":"/diagnosis"},"timestamp":1767953090480,"sessionId":"debug-session","hypothesisId":"A"}
